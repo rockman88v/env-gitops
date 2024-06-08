@@ -1,0 +1,12 @@
+nameOverride: "app2"
+service:
+  type: NodePort
+  port: 80
+  nodePort: 31111
+  #.Values.service.nodePort
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 80

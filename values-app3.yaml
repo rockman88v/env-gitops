@@ -1,0 +1,15 @@
+nameOverride: "app3"
+service:
+  type: NodePort
+  port: 80
+  nodePort: 31113
+  #.Values.service.nodePort
+
+ingress:
+  enabled: true
+  className: "nginx"
+  hosts:
+    - host: viettq.com
+      paths:
+        - path: /app3
+          pathType: ImplementationSpecific
